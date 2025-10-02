@@ -1,0 +1,113 @@
+:root {
+  --brand-primary: #e197f6;
+  --brand-accent: #7A5C9A;
+  --brand-offwhite: #F9F7FB;
+  --brand-darkgray: #5E5E5E;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--brand-offwhite);
+    color: var(--brand-darkgray);
+}
+h1, h2, h3, h4 {
+    font-family: 'Lora', serif;
+    color: var(--brand-primary);
+}
+.brand-primary { color: var(--brand-primary); }
+.brand-accent { color: var(--brand-accent); }
+.bg-brand-primary { background-color: var(--brand-primary); }
+.bg-brand-accent { background-color: var(--brand-accent); }
+.bg-brand-offwhite { background-color: var(--brand-offwhite); }
+.bg-brand-darkgray { background-color: var(--brand-darkgray); }
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .no-print {
+        display: none;
+    }
+}
+
+/* Print-specific adjustments for cleaner PDF output */
+@media print {
+    /* Use the full page and add comfortable margins for PDF */
+    @page { size: A4; margin: 18mm; }
+
+    html, body {
+        background: #ffffff !important; /* force white background for print */
+        color: var(--brand-darkgray) !important;
+        font-size: 12pt;
+    }
+
+    /* Reduce visual elements that don't translate well to PDF */
+    .max-w-4xl { max-width: 100% !important; }
+    img.logo-variation { width: 180px !important; }
+    img { page-break-inside: avoid; max-width: 100% !important; height: auto !important; }
+
+    /* Ensure headings are clear when printed */
+    h1, h2, h3, h4 { color: #000 !important; }
+
+    /* Avoid cutting sections across pages */
+    section, header, footer, .bg-white { page-break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+
+    /* Make sure subtle backgrounds are preserved when possible */
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Hide interactive or unnecessary UI elements (if added later) */
+    .no-print, .print-hide { display: none !important; }
+}
+
+    /* Strong print rules to preserve grid layout used on the page */
+    @media print {
+        /* Ensure grid display is preserved when printing */
+        .grid { display: grid !important; }
+
+        /* Tailwind responsive class names contain colons; ensure two-column grids stay two columns */
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        /* Common pattern used in the document */
+        .grid.md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+        /* Make grid children avoid being split across pages where possible */
+        .grid > * { page-break-inside: avoid; break-inside: avoid-column; }
+
+        /* Narrower images for print to prevent overflow and maintain columns */
+        .logo-variation { width: 160px !important; }
+
+        /* Force container full width for print so columns have room */
+        .max-w-4xl { max-width: 100% !important; width: 100% !important; }
+    }
+
+/* Focused logo mask implementation: single external SVG recolored via element color.
+   Logos are slightly larger for clarity while staying consistent with brand spacing.
+*/
+.logo-mask {
+    /* size comes from the .logo-variation helper so we can reuse the mask at different sizes */
+    display: inline-block;
+    vertical-align: middle;
+    background-color: currentColor; /* visible color comes from element color */
+    -webkit-mask: url('logo no text.svg') no-repeat center / contain;
+    mask: url('logo no text.svg') no-repeat center / contain;
+}
+
+/* Uniform logo variation size: slightly larger so variations are clearly visible */
+.logo-variation {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Brand-consistent color variants */
+.logo-primary { color: var(--brand-primary); }
+.logo-accent { color: var(--brand-accent); }
+.logo-white  { color: #ffffff; }
+
+/* Small helper to center logos in their container */
+.logo-center { display: flex; align-items: center; justify-content: center; }
