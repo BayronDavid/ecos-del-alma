@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --brand-primary: #e197f6;
@@ -15,15 +15,8 @@
             --brand-offwhite: #F9F7FB;
             --brand-darkgray: #5E5E5E;
         }
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: var(--brand-offwhite);
-            color: var(--brand-darkgray);
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Lora', serif;
-            color: var(--brand-primary);
-        }
+        body { font-family: 'Nunito', sans-serif; background-color: var(--brand-offwhite); color: var(--brand-darkgray); }
+        h1, h2, h3, h4, h5 { font-family: 'Lora', serif; color: var(--brand-primary); }
         .text-brand-primary { color: var(--brand-primary); }
         .text-brand-accent { color: var(--brand-accent); }
         .border-brand-primary { border-color: var(--brand-primary); }
@@ -31,16 +24,11 @@
         .bg-brand-accent { background-color: var(--brand-accent); }
         .bg-brand-offwhite { background-color: var(--brand-offwhite); }
         .bg-brand-darkgray { background-color: var(--brand-darkgray); }
-        .logo-variation {
-            width: 180px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .logo-variation { width: 180px; display: block; margin-left: auto; margin-right: auto; }
+        .font-amatic { font-family: 'Amatic SC', cursive; }
     </style>
 </head>
 <body class="bg-brand-offwhite">
-
     <div class="max-w-4xl mx-auto p-4 sm:p-8 md:p-12">
         
         <header class="text-center py-16 border-b-2 border-brand-primary">
@@ -63,15 +51,16 @@
                     </div>
 
                     <div>
-                        <h3 class="text-2xl font-bold mb-3">Público Objetivo</h3>
-                        <p class="mb-2"><strong>Principal:</strong> Incluye a:<br>
-                            <ul class="list-disc list-inside ml-4 mt-2">
-                                <li><strong>Adultos:</strong> Que buscan un espacio sin juicios para gestionar sus emociones, mejorar relaciones y navegar cambios, valorando un enfoque humano y libre de formalismos.</li>
-                                <li><strong>Adolescentes y Jóvenes (15+):</strong> Que necesitan un lugar seguro para encontrar su identidad, manejar la presión social y construir una autoestima sana.</li>
-                            </ul>
-                        </p>
-                        <p class="mt-2"><strong>Son nuestro punto de partida y el foco de nuestra etapa online.</strong></p>
-                        <p class="mt-4"><strong>Secundario:</strong> Padres y madres de familia que buscan enfoques creativos para fortalecer la dinámica familiar. <strong>Son la comunidad a la que nos expandiremos con nuestros talleres y el futuro centro presencial.</strong></p>
+                        <h3 class="text-2xl font-bold mb-3">Nuestro Público Objetivo</h3>
+                        <p class="mb-3">Nos dirigimos a personas que sienten el llamado a entenderse mejor y a sanar, independientemente de su edad. Nos enfocamos en sus situaciones y necesidades:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-2">
+                            <li><strong>La persona que se siente abrumada</strong> por la ansiedad, el estrés diario o la sensación de no poder más.</li>
+                            <li><strong>El/la joven (15+) en búsqueda de su identidad</strong>, que enfrenta presión social, dudas vocacionales o necesita construir una autoestima más fuerte.</li>
+                            <li><strong>El adulto que quiere sanar heridas del pasado</strong>, gestionar sus emociones de forma más sana o navegar transiciones importantes en su vida (duelos, cambios de trabajo, etc.).</li>
+                            <li><strong>La pareja que busca reencontrar la conexión</strong>, mejorar su comunicación y resolver conflictos de una manera constructiva.</li>
+                            <li><strong>La familia que desea fortalecer sus lazos</strong> y crear un ambiente de mayor armonía y entendimiento.</li>
+                        </ul>
+                        <p class="mt-4 bg-brand-primary/20 p-3 rounded-lg text-sm"><strong>Alcance Geográfico:</strong> Aunque nuestro corazón está en <strong>Sibundoy, Putumayo</strong>, nuestro consultorio es 100% virtual. Damos la bienvenida a consultantes a nivel regional, de todo Colombia y de la comunidad hispanohablante en el extranjero.</p>
                     </div>
                 </div>
 
@@ -109,7 +98,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="mb-16">
                 <h2 class="text-4xl font-bold border-b-2 border-brand-primary pb-2 mb-8">Identidad Visual</h2>
 
                 <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -158,23 +147,10 @@
                 <div class="mt-12">
                     <h3 class="text-2xl font-bold mb-6">Variaciones del Logo</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div class="text-center">
-                            <img src="logo.png" alt="Logo PNG" class="logo-variation">
-                            <p class="mt-2 text-sm">Logo Principal (PNG)</p>
-                        </div>
-                        <div class="text-center">
-                            <img src="logo.svg" alt="Logo SVG" class="logo-variation">
-                            <p class="mt-2 text-sm">Logo SVG (Colores Marca)</p>
-                        </div>
-                        <div class="text-center">
-                            <img src="logo no text.svg" alt="Logo Sin Texto SVG" class="logo-variation">
-                            <p class="mt-2 text-sm">Logo Sin Texto SVG</p>
-                        </div>
-                    
-                        <div class="text-center">
-                            <img src="logo-no-text.png" alt="Logo Sin Texto PNG" class="logo-variation">
-                            <p class="mt-2 text-sm">Logo Sin Texto PNG</p>
-                        </div>
+                        <div class="text-center"><img src="logo.png" alt="Logo PNG" class="logo-variation"><p class="mt-2 text-sm">Logo Principal (PNG)</p></div>
+                        <div class="text-center"><img src="logo.svg" alt="Logo SVG" class="logo-variation"><p class="mt-2 text-sm">Logo SVG (Colores Marca)</p></div>
+                        <div class="text-center"><img src="logo no text.svg" alt="Logo Sin Texto SVG" class="logo-variation"><p class="mt-2 text-sm">Logo Sin Texto SVG</p></div>
+                        <div class="text-center"><img src="logo-no-text.png" alt="Logo Sin Texto PNG" class="logo-variation"><p class="mt-2 text-sm">Logo Sin Texto PNG</p></div>
                     </div>
                 </div>
 
@@ -194,13 +170,150 @@
                      </div>
                 </div>
             </section>
+
+            <section>
+                <h2 class="text-4xl font-bold border-b-2 border-brand-primary pb-2 mb-8">Manual de Comunicación y Operaciones Digitales</h2>
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm space-y-12">
+
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Nuestra Filosofía: Un Refugio Digital</h3>
+                        <p>Nuestras redes sociales no son un simple canal de venta. Son una extensión de nuestro consultorio: un <strong>espacio seguro, cálido y enriquecedor</strong>. Cada publicación debe sentirse como una conversación amable que aporta luz y calma al día de quien nos lee. Nuestra meta es normalizar la salud mental, educar con empatía y construir una comunidad donde todos se sientan vistos y validados.</p>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">Pilares de Contenido: ¿De qué hablamos?</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-brand-offwhite p-4 rounded-lg border"><h4 class="font-bold text-xl text-brand-accent">1. Psicoeducación Amable</h4><p>Traducimos conceptos psicológicos a un lenguaje simple y práctico. El objetivo es dar herramientas útiles para el día a día.</p><p class="mt-2 text-sm"><strong>Ideas:</strong> "¿Qué son los límites y cómo ponerlos?", "3 mitos sobre la ansiedad", "Entendiendo tu niño interior".</p></div>
+                            <div class="bg-brand-offwhite p-4 rounded-lg border"><h4 class="font-bold text-xl text-brand-accent">2. Reflexión e Inspiración</h4><p>Contenido que invita a la pausa y a la introspección. Son pequeños recordatorios para el alma que generan conexión emocional.</p><p class="mt-2 text-sm"><strong>Ideas:</strong> Frases y citas inspiradoras, "Recordatorio: Está bien no estar bien", preguntas para reflexionar.</p></div>
+                            <div class="bg-brand-offwhite p-4 rounded-lg border"><h4 class="font-bold text-xl text-brand-accent">3. Interacción y Comunidad</h4><p>Creamos un diálogo. Hacemos preguntas y abrimos espacios para que la comunidad comparta sus experiencias de forma segura.</p><p class="mt-2 text-sm"><strong>Ideas:</strong> Encuestas en stories, cajas de preguntas ("Anónimamente, ¿qué te pesa hoy?"), posts que inviten a comentar.</p></div>
+                            <div class="bg-brand-offwhite p-4 rounded-lg border"><h4 class="font-bold text-xl text-brand-accent">4. Nuestro Espacio Terapéutico</h4><p>Aquí es donde presentamos nuestros servicios de forma clara y directa, mostrando el valor y la accesibilidad de la terapia.</p><p class="mt-2 text-sm"><strong>Ideas:</strong> Post tipo "servicio", "Así es una primera sesión con nosotros", beneficios de la terapia online.</p></div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div>
+                         <h3 class="text-3xl font-bold mb-6">Estrategia por Plataforma</h3>
+                         <div class="space-y-6">
+                            <div class="p-4 border rounded-lg">
+                                <h4 class="text-xl font-bold text-brand-accent">Instagram</h4>
+                                <p>Es nuestro principal escaparate visual. Priorizamos la estética y el valor en carruseles y Reels. Las Stories son nuestro canal para la conversación diaria.</p>
+                                <ul class="list-disc list-inside text-sm mt-2">
+                                    <li><strong>Feed:</strong> Carruseles educativos, Reels dinámicos con consejos rápidos, frases potentes en imagen única.</li>
+                                    <li><strong>Stories:</strong> Encuestas, Q&A, recordatorios, compartir contenido de otros. Más espontáneo.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 border rounded-lg">
+                                <h4 class="text-xl font-bold text-brand-accent">TikTok</h4>
+                                <p>Plataforma para contenido rápido, directo y muy humano. El objetivo es desmitificar la psicología y conectar de forma auténtica.</p>
+                                 <ul class="list-disc list-inside text-sm mt-2">
+                                    <li><strong>Videos cortos (15-45s):</strong> Tips prácticos, "un día en la vida de...", explicar un concepto complejo de forma simple, usar audios en tendencia de forma creativa.</li>
+                                </ul>
+                            </div>
+                             <div class="p-4 border rounded-lg">
+                                <h4 class="text-xl font-bold text-brand-accent">Facebook</h4>
+                                <p>Funciona como nuestro centro comunitario y repositorio. Aquí podemos extendernos un poco más en el texto y fomentar el diálogo.</p>
+                                 <ul class="list-disc list-inside text-sm mt-2">
+                                    <li>Compartir el contenido de Instagram, escribir reflexiones más largas, crear eventos para talleres online, enlazar a artículos o recursos externos de interés.</li>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">Guía Visual Maestra</h3>
+                        <h4 class="font-bold text-xl text-brand-accent mb-3">Colores y Tipografía en Acción</h4>
+                        <p>La paleta de colores y las tipografías ya definidas en la sección de "Identidad Visual" son nuestra base. <strong>Regla de oro:</strong> Usa el Blanco Roto como lienzo. El Lavanda da calidez. El Violeta y el Gris aseguran que todo sea legible y profesional. En las imágenes, usa <strong>Amatic SC</strong> para titulares llamativos y <strong>Nunito</strong> para textos explicativos.</p>
+                        
+                        <h4 class="font-bold text-xl text-brand-accent mt-6 mb-3">Elementos Gráficos y Fotografía</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Estilo "Hecho a Mano":</strong> Incorpora elementos que no sean perfectos. Trazos de pincel, texturas de papel rasgado, manchas de acuarela.</li>
+                            <li><strong>Iconografía Amable:</strong> Piensa en íconos sencillos y universales: plantas, tazas, llaves, ventanas, nubes, soles, lunas. Deben sentirse como dibujos en un diario.</li>
+                            <li><strong>Fotografía (si se usa):</strong> Debe evocar calma y serenidad. Piensa en naturaleza, texturas de telas, luz entrando por una ventana, un libro y una taza de té. Evita las fotos de stock genéricas y corporativas. Si aparecen personas, que sea en actitudes de reflexión y sin mostrar el rostro para proteger la idea de un espacio íntimo.</li>
+                        </ul>
+                    </div>
+                    
+                    <hr>
+
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Manual de Operaciones y Comunicación</h3>
+                        
+                        <div class="mt-6">
+                            <h4 class="text-xl font-bold text-brand-accent mb-3">Plataformas para Terapia Online</h4>
+                            <p>La confidencialidad y facilidad de uso son nuestra prioridad. Estas son las opciones recomendadas:</p>
+                             <ul class="list-disc list-inside space-y-2">
+                                 <li><strong>Google Meet:</strong> Opción muy accesible y conocida por los usuarios. La versión incluida en Google Workspace cumple con normativas de seguridad de datos como HIPAA.</li>
+                                 <li><strong>Doxy.me:</strong> Plataforma gratuita (con planes de pago) diseñada específicamente para telemedicina. Es muy segura y no requiere que el consultante descargue nada.</li>
+                                 <li><strong>Whereby:</strong> Opción sencilla que también cuenta con una versión gratuita y se enfoca en la privacidad.</li>
+                             </ul>
+                        </div>
+
+                        <div class="mt-8">
+                             <h4 class="text-xl font-bold text-brand-accent mb-3">Plantillas de Mensajes Automáticos</h4>
+                             <p>Cuando alguien nos contacte por primera vez por DM (Instagram/Facebook), podemos usar estas respuestas para ofrecer una bienvenida cálida y gestionar expectativas.</p>
+                             <div class="mt-4 p-4 bg-gray-100 rounded-lg border">
+                                <h5 class="font-bold">Opción 1 (Cálida y Directa):</h5>
+                                <p class="text-sm italic">"¡Hola! Gracias por escribir a Ecos del Alma. Hemos recibido tu mensaje y te responderemos personalmente muy pronto. Nuestro horario de atención es de [Lunes a Viernes de 9am a 6pm]. Si buscas agendar una cita, puedes encontrar más información aquí: [Enlace a Calendly, WhatsApp o página de contacto]"</p>
+                             </div>
+                             <div class="mt-4 p-4 bg-gray-100 rounded-lg border">
+                                <h5 class="font-bold">Opción 2 (Más Breve):</h5>
+                                <p class="text-sm italic">"¡Hola! Gracias por tu mensaje. En breve estaremos contigo. Si tienes preguntas sobre nuestras consultas, precios o quieres agendar, estamos aquí para ayudarte."</p>
+                             </div>
+                        </div>
+
+                        <div class="mt-8">
+                             <h4 class="text-xl font-bold text-brand-accent mb-3">Banco de Respuestas a Preguntas Frecuentes (FAQ)</h4>
+                             <p>Para agilizar la comunicación, podemos adaptar estas plantillas.</p>
+                             <div class="space-y-4 mt-4">
+                                <div class="p-4 border rounded-lg">
+                                    <p><strong>¿Cuánto cuesta la consulta?</strong></p>
+                                    <p class="mt-2 text-sm">"Hola, ¡gracias por tu interés! Nuestra consulta individual tiene un valor de [$XX.XXX COP]. También contamos con paquetes de [X] sesiones con un descuento especial. ¿Te gustaría conocer más sobre ellos?"</p>
+                                </div>
+                                <div class="p-4 border rounded-lg">
+                                    <p><strong>¿Cómo agendo una cita?</strong></p>
+                                    <p class="mt-2 text-sm">"¡Claro! Agendar es muy fácil. Puedes hacerlo a través de nuestro enlace directo a [WhatsApp/Calendly: ENLACE]. Allí podrás ver los horarios disponibles y separar el que mejor te funcione. ¡Esperamos verte pronto!"</p>
+                                </div>
+                                <div class="p-4 border rounded-lg">
+                                    <p><strong>¿Qué tipo de terapia hacen?</strong></p>
+                                    <p class="mt-2 text-sm">"En Ecos del Alma tenemos un enfoque integrativo y humanista. Esto significa que adaptamos las herramientas terapéuticas a tus necesidades específicas, siempre desde un espacio de empatía, sin juicios y enfocado en tu bienestar. Si tienes curiosidad por algún enfoque en particular, no dudes en preguntar."</p>
+                                </div>
+                                <div class="p-4 border rounded-lg">
+                                    <p><strong>No estoy seguro/a si la terapia es para mí...</strong></p>
+                                    <p class="mt-2 text-sm">"Es una duda muy válida y es normal tenerla. La terapia es un espacio para cualquier persona que quiera conocerse mejor, encontrar herramientas para sus desafíos o simplemente tener un lugar seguro para hablar. Si quieres, podemos agendar una primera sesión exploratoria de 30 minutos sin costo para que nos conozcas y resuelvas tus dudas. ¿Te parece bien?"</p>
+                                </div>
+                             </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold text-brand-accent mb-3">Protocolo de Manejo de Comentarios y Crisis</h4>
+                             <ul class="list-disc list-inside space-y-4">
+                                 <li><strong>Comentarios Positivos:</strong> Siempre agradecer y responder de forma personalizada. Un "Gracias por tus palabras, nos alegra que te sirva" es suficiente.</li>
+                                 <li><strong>Comentarios Negativos o Críticas:</strong> Responder públicamente de forma amable y profesional, y llevar la conversación a un canal privado. "Lamentamos que hayas tenido esa experiencia. Nos gustaría entender mejor, ¿podrías escribirnos por mensaje directo, por favor?".</li>
+                                 <li class="p-4 bg-red-100 border-l-4 border-red-500 rounded">
+                                    <strong class="text-red-700">MANEJO DE CRISIS (MUY IMPORTANTE):</strong> Nuestras redes no son un canal de emergencia. Si un comentario expresa ideación suicida o una crisis grave, la respuesta debe ser clara y directa, priorizando la seguridad de la persona.
+                                    <p class="mt-2 text-sm"><strong>Plantilla de respuesta:</strong> "Gracias por tu valentía al compartir cómo te sientes. Vemos que estás pasando por un momento muy difícil y es importante que recibas ayuda inmediata. Por favor, contacta a la Línea de Salud Mental en Colombia al 106 o busca ayuda en el servicio de urgencias más cercano. No estás solo/a. Este espacio no es un canal de emergencia y no podemos darte el soporte inmediato que mereces."</p>
+                                 </li>
+                             </ul>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold text-brand-accent mb-3">Uso Estratégico de Emojis</h4>
+                            <p>Los emojis se usan al final de las frases o en las listas para añadir calidez y emoción, nunca para reemplazar palabras importantes. Deben ser coherentes con nuestra paleta de colores y personalidad.</p>
+                            <p class="text-2xl mt-2">🌱 ✨ ❤️‍🩹 ☕️ 🧘‍♀️ 🤗 🧠 💬 👇 ✅</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="text-center mt-16 pt-8 border-t-2 border-brand-primary">
             <p class="text-sm text-brand-darkgray">&copy; 2025 Ecos del Alma. Todos los derechos reservados.</p>
         </footer>
-
     </div>
-
 </body>
 </html>
