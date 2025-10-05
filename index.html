@@ -573,21 +573,10 @@ Asegurar que el tono general sea de calma, profesionalismo y cercanía."
                         openLightbox(currentIndex, true);
                     }
 
-                    // attach events to grid images: single click = maximize (no slider), double click = open slider
+                    // attach events to grid images: single click opens slider
                     grid.forEach((img, idx) => {
                         img.addEventListener('click', (e) => {
-                            // differentiate single vs double click
-                            if (clickTimer == null) {
-                                clickTimer = setTimeout(() => {
-                                    clickTimer = null;
-                                    openLightbox(idx, false);
-                                }, 250);
-                            }
-                        });
-                        img.addEventListener('dblclick', (e) => {
-                            // cancel single click timer
-                            if (clickTimer) { clearTimeout(clickTimer); clickTimer = null; }
-                            openLightbox(idx, true);
+                            openLightbox(idx, true); // Always open in slider mode
                         });
                     });
 
@@ -608,6 +597,26 @@ Asegurar que el tono general sea de calma, profesionalismo y cercanía."
                         if(e.key === 'ArrowRight') showNext();
                         if(e.key === 'ArrowLeft') showPrev();
                     });
+
+                    // Touch navigation for swiping
+                    let touchStartX = 0;
+                    let touchEndX = 0;
+                    const swipeThreshold = 50; // Min distance for a swipe
+
+                    lightbox.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+
+                    lightbox.addEventListener('touchend', (e) => {
+                        touchEndX = e.changedTouches[0].screenX;
+                        const swipeDistance = touchEndX - touchStartX;
+                        if (swipeDistance > swipeThreshold) {
+                            showPrev(); // Swiped right
+                        } else if (swipeDistance < -swipeThreshold) {
+                            showNext(); // Swiped left
+                        }
+                    });
+
                 })();
             </script>
 
